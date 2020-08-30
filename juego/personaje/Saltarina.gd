@@ -1,11 +1,12 @@
 extends KinematicBody2D
 
 
-func _ready():
-	print("hola mundo soy Saltarina desde el kinematicbody")
-
-#func _process(delta):
-#	print("hola mundo")
-
-func _physics_process(delta):
-	print("hola mundo")
+func _input(event):
+	if event.is_action("salto"):
+		print("saltar")
+	
+	if event.is_action_pressed("mov_derecha"):
+		print("derecha")
+	
+	if event.is_action_released("mov_izquierda"):
+		print("izquierda")
