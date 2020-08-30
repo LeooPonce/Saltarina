@@ -3,7 +3,6 @@
 [ext_resource path="res://recursos/Environment/ground_grass.png" type="Texture" id=1]
 
 [node name="Plataforma" type="StaticBody2D"]
-position = Vector2( 619.881, 361.597 )
 scale = Vector2( 0.3, 0.3 )
 __meta__ = {
 "_edit_group_": true

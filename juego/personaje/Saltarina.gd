@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var velocidad = Vector2(150.0, 150.0)
+export var velocidad = Vector2(150.0, 150.0)
 
 func _physics_process(delta):
 	var movimiento = velocidad * tomar_direccion()

@@ -8,11 +8,12 @@ radius = 42.6336
 height = 62.1167
 
 [node name="Saltarina" type="KinematicBody2D"]
-position = Vector2( 519.913, 359.594 )
+scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
+velocidad = Vector2( 180, 200 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -101.466 )
