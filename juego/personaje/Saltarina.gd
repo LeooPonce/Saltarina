@@ -3,6 +3,7 @@ extends KinematicBody2D
 export var velocidad = Vector2(150.0, 150.0)
 export var acel_caida = 400
 export var fuerza_salto = 3000
+export var fuerza_rebote = 350
 
 var movimiento = Vector2.ZERO
 
@@ -12,7 +13,8 @@ onready var audio_salto = $AudioSalto
 func _physics_process(delta):
 	movimiento.x = velocidad.x * tomar_direccion()
 	caer()
-	saltar()	
+	saltar()
+	colision_techo()
 
 	move_and_slide(movimiento, Vector2.UP)
 
@@ -43,3 +45,7 @@ func saltar():
 		animacion.play("saltar")
 		movimiento.y = 0
 		movimiento.y -= fuerza_salto
+
+func colision_techo():
+	if is_on_ceiling():
+		movimiento.y = fuerza_rebote
