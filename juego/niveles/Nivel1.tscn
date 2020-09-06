@@ -7,13 +7,26 @@
 [node name="Nivel1" type="Node"]
 
 [node name="Saltarina" parent="." instance=ExtResource( 1 )]
-position = Vector2( 656.195, 461.034 )
-velocidad = Vector2( 180, 220 )
+position = Vector2( 573.04, 381.434 )
+velocidad = Vector2( 400, 900 )
+acel_caida = 320
+fuerza_salto = 2800
 
 [node name="PlataformaArena" parent="." instance=ExtResource( 3 )]
-position = Vector2( 653.525, 570.248 )
+position = Vector2( 774.477, 388.819 )
+collision_layer = 1
+collision_mask = 1
+
+[node name="PlataformaArena2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 908.029, 490.873 )
 collision_layer = 1
 collision_mask = 1
 
 [node name="PlataformaCesped" parent="." instance=ExtResource( 2 )]
-position = Vector2( 655.159, 498.929 )
+position = Vector2( 575.784, 394.356 )
+
+[node name="PlataformaCesped2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 265.844, 572.004 )
+
+[node name="PlataformaCesped3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 423.333, 481.29 )
