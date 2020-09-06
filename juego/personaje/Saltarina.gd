@@ -9,12 +9,14 @@ var movimiento = Vector2.ZERO
 
 onready var animacion = $Animacion
 onready var audio_salto = $AudioSalto
+onready var camara = $Camera2D
 
 func _physics_process(delta):
 	movimiento.x = velocidad.x * tomar_direccion()
 	caer()
 	saltar()
 	colision_techo()
+	reset()
 
 	move_and_slide(movimiento, Vector2.UP)
 
@@ -49,3 +51,7 @@ func saltar():
 func colision_techo():
 	if is_on_ceiling():
 		movimiento.y = fuerza_rebote
+
+func reset():
+	if position.y > camara.limit_bottom:
+		get_tree().reload_current_scene()

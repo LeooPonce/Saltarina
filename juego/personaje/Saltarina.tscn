@@ -37,7 +37,9 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
-velocidad = Vector2( 180, 200 )
+velocidad = Vector2( 600, 900 )
+acel_caida = 280
+fuerza_salto = 2800
 
 [node name="Sprite" type="Sprite" parent="."]
 visible = false
@@ -60,8 +62,7 @@ volume_db = -20.194
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 0, -377.741 )
 current = true
-zoom = Vector2( 1.8, 1.8 )
-limit_left = -2000
+zoom = Vector2( 1.5, 1.5 )
 limit_bottom = 2000
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
