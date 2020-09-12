@@ -4,6 +4,8 @@
 
 [node name="Plataforma" type="StaticBody2D"]
 scale = Vector2( 0.3, 0.3 )
+z_index = 40
+z_as_relative = false
 collision_layer = 4
 collision_mask = 10
 __meta__ = {

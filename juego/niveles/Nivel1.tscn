@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://juego/personaje/Saltarina.tscn" type="PackedScene" id=1]
 [ext_resource path="res://juego/plataformas/PlataformaCesped.tscn" type="PackedScene" id=2]
@@ -6,55 +6,63 @@
 [ext_resource path="res://juego/plataformas/PlataformaLargaPiedra.tscn" type="PackedScene" id=4]
 [ext_resource path="res://juego/plataformas/PlataformaNieve.tscn" type="PackedScene" id=5]
 [ext_resource path="res://recursos/Background/bg_layer1.png" type="Texture" id=6]
+[ext_resource path="res://juego/objetos/Pinchos.tscn" type="PackedScene" id=7]
 
 [node name="Nivel1" type="Node"]
 
 [node name="Fondo" type="Sprite" parent="."]
 position = Vector2( -437.369, 273.791 )
 scale = Vector2( 4.60302, 2.17841 )
+z_index = -50
+z_as_relative = false
 texture = ExtResource( 6 )
 
 [node name="Saltarina" parent="." instance=ExtResource( 1 )]
-position = Vector2( -114.51, 811.832 )
+position = Vector2( -113.032, 820.589 )
 
 [node name="PlataformasNormales" type="Node" parent="."]
 
 [node name="PlataformaCesped" parent="PlataformasNormales" instance=ExtResource( 2 )]
 position = Vector2( 1040.04, 625.844 )
+z_index = 0
+z_as_relative = true
 
 [node name="PlataformaCesped2" parent="PlataformasNormales" instance=ExtResource( 2 )]
 position = Vector2( 305.707, 774.976 )
+z_index = 0
+z_as_relative = true
 
 [node name="PlataformaNieve" parent="PlataformasNormales" instance=ExtResource( 5 )]
 position = Vector2( 130.159, 378.491 )
+z_index = 0
+z_as_relative = true
 
 [node name="PlataformaNieve2" parent="PlataformasNormales" instance=ExtResource( 5 )]
 position = Vector2( 332.148, 253.9 )
+z_index = 0
+z_as_relative = true
 
 [node name="PlataformasCortas" type="Node" parent="."]
 
 [node name="PlataformaCorta" parent="PlataformasCortas" instance=ExtResource( 3 )]
 position = Vector2( -102.526, 504.068 )
-scale = Vector2( 0.3, 0.3 )
-collision_layer = 4
-collision_mask = 10
+z_index = 0
+z_as_relative = true
 
 [node name="PlataformaCorta2" parent="PlataformasCortas" instance=ExtResource( 3 )]
 position = Vector2( 1301.96, 192.589 )
-scale = Vector2( 0.3, 0.3 )
-collision_layer = 4
-collision_mask = 10
+z_index = 0
+z_as_relative = true
 
 [node name="PlataformaCorta3" parent="PlataformasCortas" instance=ExtResource( 3 )]
 position = Vector2( 1513.39, 292.64 )
-scale = Vector2( 0.3, 0.3 )
-collision_layer = 4
-collision_mask = 10
+z_index = 0
+z_as_relative = true
 
 [node name="PlataformasLargas" type="Node" parent="."]
 
 [node name="PlataformaLargaPiedra" parent="PlataformasLargas" instance=ExtResource( 4 )]
-position = Vector2( 1413.98, 700.567 )
+position = Vector2( 1414.57, 708.891 )
 
 [node name="PlataformaLargaPiedra2" parent="PlataformasLargas" instance=ExtResource( 4 )]
 position = Vector2( 1534.79, 460.823 )
@@ -67,3 +75,6 @@ position = Vector2( 832.55, 211.64 )
 
 [node name="PlataformaLargaPiedra3" parent="PlataformasLargas" instance=ExtResource( 4 )]
 position = Vector2( 43.4705, 838.372 )
+
+[node name="Pinchos" parent="." instance=ExtResource( 7 )]
+position = Vector2( -27.9607, 822.039 )
