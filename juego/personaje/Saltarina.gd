@@ -16,7 +16,7 @@ func _physics_process(delta):
 	caer()
 	saltar()
 	colision_techo()
-	respawn()
+	caida_al_vacio()
 
 	move_and_slide(movimiento, Vector2.UP)
 
@@ -52,6 +52,10 @@ func colision_techo():
 	if is_on_ceiling():
 		movimiento.y = fuerza_rebote
 
-func respawn():
+func caida_al_vacio():
 	if position.y > camara.limit_bottom:
-		get_tree().reload_current_scene()
+		respawn()
+
+func respawn():
+	get_tree().reload_current_scene()
+

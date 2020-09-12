@@ -77,4 +77,4 @@ position = Vector2( 832.55, 211.64 )
 position = Vector2( 43.4705, 838.372 )
 
 [node name="Pinchos" parent="." instance=ExtResource( 7 )]
-position = Vector2( -27.9607, 822.039 )
+position = Vector2( 108.901, 822.039 )
