@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://juego/personaje/Saltarina.tscn" type="PackedScene" id=1]
 [ext_resource path="res://juego/plataformas/PlataformaCesped.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://juego/plataformas/PlataformaNieve.tscn" type="PackedScene" id=5]
 [ext_resource path="res://recursos/Background/bg_layer1.png" type="Texture" id=6]
 [ext_resource path="res://juego/objetos/Pinchos.tscn" type="PackedScene" id=7]
+[ext_resource path="res://enemigos/Pinchon.tscn" type="PackedScene" id=8]
 
 [node name="Nivel1" type="Node"]
 
@@ -18,7 +19,7 @@ z_as_relative = false
 texture = ExtResource( 6 )
 
 [node name="Saltarina" parent="." instance=ExtResource( 1 )]
-position = Vector2( -113.032, 820.589 )
+position = Vector2( 250.865, 761.129 )
 
 [node name="PlataformasNormales" type="Node" parent="."]
 
@@ -78,3 +79,6 @@ position = Vector2( 43.4705, 838.372 )
 
 [node name="Pinchos" parent="." instance=ExtResource( 7 )]
 position = Vector2( 108.901, 822.039 )
+
+[node name="Pinchon" parent="." instance=ExtResource( 8 )]
+position = Vector2( 739.162, 705.448 )
