@@ -19,12 +19,12 @@ z_as_relative = false
 texture = ExtResource( 6 )
 
 [node name="Saltarina" parent="." instance=ExtResource( 1 )]
-position = Vector2( 250.865, 761.129 )
+position = Vector2( 291.753, 761.626 )
 
 [node name="PlataformasNormales" type="Node" parent="."]
 
 [node name="PlataformaCesped" parent="PlataformasNormales" instance=ExtResource( 2 )]
-position = Vector2( 1040.04, 625.844 )
+position = Vector2( 927.04, 685.844 )
 z_index = 0
 z_as_relative = true
 
@@ -77,8 +77,10 @@ position = Vector2( 832.55, 211.64 )
 [node name="PlataformaLargaPiedra3" parent="PlataformasLargas" instance=ExtResource( 4 )]
 position = Vector2( 43.4705, 838.372 )
 
+[node name="Enemigos" type="Node" parent="."]
+
+[node name="Pinchon" parent="Enemigos" instance=ExtResource( 8 )]
+position = Vector2( 653.162, 705.448 )
+
 [node name="Pinchos" parent="." instance=ExtResource( 7 )]
 position = Vector2( 108.901, 822.039 )
-
-[node name="Pinchon" parent="." instance=ExtResource( 8 )]
-position = Vector2( 739.162, 705.448 )
