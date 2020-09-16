@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://juego/personaje/Saltarina.tscn" type="PackedScene" id=1]
 [ext_resource path="res://juego/plataformas/PlataformaCesped.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://recursos/Background/bg_layer1.png" type="Texture" id=6]
 [ext_resource path="res://enemigos/Volon.tscn" type="PackedScene" id=7]
 [ext_resource path="res://enemigos/Pinchon.tscn" type="PackedScene" id=8]
+[ext_resource path="res://enemigos/Nubon.tscn" type="PackedScene" id=9]
 
 [node name="Nivel1" type="Node"]
 
@@ -84,3 +85,6 @@ position = Vector2( 1211.13, 686.76 )
 
 [node name="Volon" parent="Enemigos" instance=ExtResource( 7 )]
 position = Vector2( 410.547, 798.558 )
+
+[node name="Nubon" parent="Enemigos" instance=ExtResource( 9 )]
+position = Vector2( -75.994, 398.808 )
