@@ -6,9 +6,9 @@
 [ext_resource path="res://juego/plataformas/PlataformaLargaPiedra.tscn" type="PackedScene" id=4]
 [ext_resource path="res://juego/plataformas/PlataformaNieve.tscn" type="PackedScene" id=5]
 [ext_resource path="res://recursos/Background/bg_layer1.png" type="Texture" id=6]
-[ext_resource path="res://enemigos/Volon.tscn" type="PackedScene" id=7]
-[ext_resource path="res://enemigos/Pinchon.tscn" type="PackedScene" id=8]
-[ext_resource path="res://enemigos/Nubon.tscn" type="PackedScene" id=9]
+[ext_resource path="res://juego/enemigos/Volon.tscn" type="PackedScene" id=7]
+[ext_resource path="res://juego/enemigos/Pinchon.tscn" type="PackedScene" id=8]
+[ext_resource path="res://juego/enemigos/Nubon.tscn" type="PackedScene" id=9]
 
 [node name="Nivel1" type="Node"]
 
@@ -20,7 +20,7 @@ z_as_relative = false
 texture = ExtResource( 6 )
 
 [node name="Saltarina" parent="." instance=ExtResource( 1 )]
-position = Vector2( 75.0313, 819.624 )
+position = Vector2( 69.145, 820.465 )
 
 [node name="PlataformasNormales" type="Node" parent="."]
 
@@ -47,7 +47,7 @@ z_as_relative = true
 [node name="PlataformasCortas" type="Node" parent="."]
 
 [node name="PlataformaCorta" parent="PlataformasCortas" instance=ExtResource( 3 )]
-position = Vector2( -102.526, 504.068 )
+position = Vector2( 252.371, 115.192 )
 z_index = 0
 z_as_relative = true
 
@@ -84,7 +84,9 @@ position = Vector2( 43.4705, 838.372 )
 position = Vector2( 1211.13, 686.76 )
 
 [node name="Volon" parent="Enemigos" instance=ExtResource( 7 )]
-position = Vector2( 410.547, 798.558 )
+position = Vector2( 424.017, 767.129 )
 
 [node name="Nubon" parent="Enemigos" instance=ExtResource( 9 )]
-position = Vector2( -75.994, 398.808 )
+position = Vector2( -211.545, 448.052 )
+
+[node name="Rayos" type="Node" parent="."]
