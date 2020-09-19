@@ -13,61 +13,103 @@
 [node name="Nivel1" type="Node"]
 
 [node name="Fondo" type="Sprite" parent="."]
-position = Vector2( -437.369, 273.791 )
+position = Vector2( 900.936, 541.061 )
 scale = Vector2( 4.60302, 2.17841 )
 z_index = -50
 z_as_relative = false
 texture = ExtResource( 6 )
 
-[node name="Saltarina" parent="." instance=ExtResource( 1 )]
-position = Vector2( 69.145, 820.465 )
-
 [node name="PlataformasNormales" type="Node" parent="."]
 
 [node name="PlataformaCesped" parent="PlataformasNormales" instance=ExtResource( 2 )]
-position = Vector2( 927.04, 685.844 )
+position = Vector2( 171.893, 203.389 )
 z_index = 0
 z_as_relative = true
 
 [node name="PlataformaCesped2" parent="PlataformasNormales" instance=ExtResource( 2 )]
-position = Vector2( 651.431, 466.628 )
+position = Vector2( 419.797, 701.825 )
+z_index = 0
+z_as_relative = true
+
+[node name="PlataformaCesped3" parent="PlataformasNormales" instance=ExtResource( 2 )]
+position = Vector2( 2462.44, 773.869 )
+z_index = 0
+z_as_relative = true
+
+[node name="PlataformaCesped4" parent="PlataformasNormales" instance=ExtResource( 2 )]
+position = Vector2( 2704.89, 639.173 )
+z_index = 0
+z_as_relative = true
+
+[node name="PlataformaCesped6" parent="PlataformasNormales" instance=ExtResource( 2 )]
+position = Vector2( 2897.96, 522.437 )
+z_index = 0
+z_as_relative = true
+
+[node name="PlataformaCesped7" parent="PlataformasNormales" instance=ExtResource( 2 )]
+position = Vector2( 2772.24, 337.997 )
+z_index = 0
+z_as_relative = true
+
+[node name="PlataformaCesped5" parent="PlataformasNormales" instance=ExtResource( 2 )]
+position = Vector2( 1307.7, 172.034 )
+z_index = 0
+z_as_relative = true
+
+[node name="PlataformaCesped8" parent="PlataformasNormales" instance=ExtResource( 2 )]
+position = Vector2( 1664.46, 376.577 )
+z_index = 0
+z_as_relative = true
+
+[node name="PlataformaCesped9" parent="PlataformasNormales" instance=ExtResource( 2 )]
+position = Vector2( 1540.78, 312.36 )
+z_index = 0
+z_as_relative = true
+
+[node name="PlataformaCesped10" parent="PlataformasNormales" instance=ExtResource( 2 )]
+position = Vector2( 1440.89, 233.872 )
 z_index = 0
 z_as_relative = true
 
 [node name="PlataformaNieve" parent="PlataformasNormales" instance=ExtResource( 5 )]
-position = Vector2( 130.159, 378.491 )
+position = Vector2( -382.739, 355.043 )
 z_index = 0
 z_as_relative = true
 
 [node name="PlataformaNieve2" parent="PlataformasNormales" instance=ExtResource( 5 )]
-position = Vector2( 332.148, 253.9 )
+position = Vector2( -93.3043, 244.795 )
 z_index = 0
 z_as_relative = true
 
 [node name="PlataformasCortas" type="Node" parent="."]
 
 [node name="PlataformaCorta" parent="PlataformasCortas" instance=ExtResource( 3 )]
-position = Vector2( 252.371, 115.192 )
+position = Vector2( -221.491, 537.694 )
 z_index = 0
 z_as_relative = true
 
 [node name="PlataformaCorta2" parent="PlataformasCortas" instance=ExtResource( 3 )]
-position = Vector2( 1301.96, 192.589 )
+position = Vector2( 1184.09, 993.865 )
 z_index = 0
 z_as_relative = true
 
 [node name="PlataformaCorta3" parent="PlataformasCortas" instance=ExtResource( 3 )]
-position = Vector2( 1513.39, 292.64 )
+position = Vector2( 1383.48, 994.153 )
+z_index = 0
+z_as_relative = true
+
+[node name="PlataformaCorta4" parent="PlataformasCortas" instance=ExtResource( 3 )]
+position = Vector2( 1585.08, 994.153 )
 z_index = 0
 z_as_relative = true
 
 [node name="PlataformasLargas" type="Node" parent="."]
 
 [node name="PlataformaLargaPiedra" parent="PlataformasLargas" instance=ExtResource( 4 )]
-position = Vector2( 1414.57, 708.891 )
+position = Vector2( 2017.42, 417.072 )
 
 [node name="PlataformaLargaPiedra2" parent="PlataformasLargas" instance=ExtResource( 4 )]
-position = Vector2( 1534.79, 460.823 )
+position = Vector2( 1963.57, 879.826 )
 
 [node name="PlataformaLargaPiedra4" parent="PlataformasLargas" instance=ExtResource( 4 )]
 position = Vector2( 790.299, 821.216 )
@@ -81,12 +123,39 @@ position = Vector2( 43.4705, 838.372 )
 [node name="Enemigos" type="Node" parent="."]
 
 [node name="Pinchon" parent="Enemigos" instance=ExtResource( 8 )]
-position = Vector2( 1211.13, 686.76 )
+position = Vector2( 171.932, 188.619 )
+velocidad = 150.0
+
+[node name="Pinchon2" parent="Enemigos" instance=ExtResource( 8 )]
+position = Vector2( 722.59, 802.844 )
+velocidad = 120.0
+
+[node name="Pinchon3" parent="Enemigos" instance=ExtResource( 8 )]
+position = Vector2( 1967.25, 860.243 )
+velocidad = 160.0
 
 [node name="Volon" parent="Enemigos" instance=ExtResource( 7 )]
-position = Vector2( 424.017, 767.129 )
+position = Vector2( 377.921, 161.171 )
+
+[node name="Volon3" parent="Enemigos" instance=ExtResource( 7 )]
+position = Vector2( 1042.6, 11.2643 )
+
+[node name="Volon4" parent="Enemigos" instance=ExtResource( 7 )]
+position = Vector2( 171.446, 28.2348 )
+
+[node name="Volon2" parent="Enemigos" instance=ExtResource( 7 )]
+position = Vector2( 2532.73, 438.731 )
 
 [node name="Nubon" parent="Enemigos" instance=ExtResource( 9 )]
-position = Vector2( -211.545, 448.052 )
+position = Vector2( 760.184, -491.279 )
+
+[node name="Nubon2" parent="Enemigos" instance=ExtResource( 9 )]
+position = Vector2( 858.328, 314.671 )
+
+[node name="Nubon3" parent="Enemigos" instance=ExtResource( 9 )]
+position = Vector2( 2836.03, -298.38 )
 
 [node name="Rayos" type="Node" parent="."]
+
+[node name="Saltarina" parent="." instance=ExtResource( 1 )]
+position = Vector2( -135.8, 820.683 )

@@ -14,15 +14,15 @@ animations = [ {
 "name": "idle",
 "speed": 2.0
 }, {
-"frames": [ ExtResource( 3 ) ],
-"loop": true,
-"name": "saltar",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "correr",
 "speed": 10.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "saltar",
+"speed": 5.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
@@ -64,6 +64,7 @@ shape = SubResource( 3 )
 [node name="AudioSalto" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
 volume_db = -20.194
+bus = "SFX"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 0, -377.741 )
