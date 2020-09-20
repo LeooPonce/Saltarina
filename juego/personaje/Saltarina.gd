@@ -7,10 +7,16 @@ export var fuerza_rebote = 350
 export var impulso = -3800
 
 var movimiento = Vector2.ZERO
+var fuerza_salto_original
 
 onready var animacion = $Animacion
 onready var audio_salto = $AudioSalto
 onready var camara = $Camera2D
+onready var enfriamiento_power_up = $EnfriamientoPowerUp
+
+func _ready():
+	fuerza_salto_original = fuerza_salto
+
 
 func _physics_process(_delta):
 	movimiento.x = velocidad.x * tomar_direccion()
@@ -56,6 +62,9 @@ func colision_techo():
 func impulsar():
 	movimiento.y = impulso
 
+func cambiar_fuerza_salto():
+	enfriamiento_power_up.start()
+	fuerza_salto = -impulso * 0.9
 
 func caida_al_vacio():
 	if position.y > camara.limit_bottom:
@@ -64,3 +73,6 @@ func caida_al_vacio():
 func respawn():
 	get_tree().reload_current_scene()
 
+
+func _on_EnfriamientoPowerUp_timeout():
+	fuerza_salto = fuerza_salto_original
