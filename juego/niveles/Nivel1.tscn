@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://juego/personaje/Saltarina.tscn" type="PackedScene" id=1]
 [ext_resource path="res://juego/plataformas/PlataformaCesped.tscn" type="PackedScene" id=2]
@@ -9,6 +9,9 @@
 [ext_resource path="res://juego/enemigos/Volon.tscn" type="PackedScene" id=7]
 [ext_resource path="res://juego/enemigos/Pinchon.tscn" type="PackedScene" id=8]
 [ext_resource path="res://juego/enemigos/Nubon.tscn" type="PackedScene" id=9]
+[ext_resource path="res://juego/objetos/MonedaOro.tscn" type="PackedScene" id=10]
+[ext_resource path="res://juego/objetos/MonedaPlata.tscn" type="PackedScene" id=11]
+[ext_resource path="res://juego/objetos/MonedaBronce.tscn" type="PackedScene" id=12]
 
 [node name="Nivel1" type="Node"]
 
@@ -154,6 +157,17 @@ position = Vector2( 858.328, 314.671 )
 
 [node name="Nubon3" parent="Enemigos" instance=ExtResource( 9 )]
 position = Vector2( 2836.03, -298.38 )
+
+[node name="Monedas" type="Node" parent="."]
+
+[node name="MonedaOro" parent="Monedas" instance=ExtResource( 10 )]
+position = Vector2( -16.0181, 711.47 )
+
+[node name="MonedaPlata" parent="Monedas" instance=ExtResource( 11 )]
+position = Vector2( 38.0145, 637.307 )
+
+[node name="MonedaBronce" parent="Monedas" instance=ExtResource( 12 )]
+position = Vector2( 100.523, 713.589 )
 
 [node name="Rayos" type="Node" parent="."]
 
