@@ -6,16 +6,21 @@ export var fuerza_salto = 3000
 export var fuerza_rebote = 350
 export var impulso = -3800
 
+
 var movimiento = Vector2.ZERO
 var fuerza_salto_original
+var acel_caida_original
 
 onready var animacion = $Animacion
 onready var audio_salto = $AudioSalto
 onready var camara = $Camera2D
-onready var enfriamiento_power_up = $EnfriamientoPowerUp
+onready var enfriamiento_power_up = $EnfriamientoPowerUpSalto
+onready var enfriamiento_power_up_volar = $EnfriamientoPowerUpVolar
+onready var animacion_power_up = $AnimationPlayer
 
 func _ready():
 	fuerza_salto_original = fuerza_salto
+	acel_caida_original = acel_caida
 
 
 func _physics_process(_delta):
@@ -52,8 +57,11 @@ func saltar():
 	if Input.is_action_just_pressed("salto") and is_on_floor():
 		audio_salto.play()
 		animacion.play("saltar")
-		movimiento.y = 0
-		movimiento.y -= fuerza_salto
+		saltar_movimiento()
+
+func saltar_movimiento():
+	movimiento.y = 0
+	movimiento.y -= fuerza_salto
 
 func colision_techo():
 	if is_on_ceiling():
@@ -66,6 +74,13 @@ func cambiar_fuerza_salto():
 	enfriamiento_power_up.start()
 	fuerza_salto = -impulso * 0.9
 
+func volar():
+	enfriamiento_power_up_volar.start()
+	acel_caida = 60
+	animacion_power_up.play("volar")
+	saltar_movimiento()
+
+
 func caida_al_vacio():
 	if position.y > camara.limit_bottom:
 		respawn()
@@ -76,3 +91,8 @@ func respawn():
 
 func _on_EnfriamientoPowerUp_timeout():
 	fuerza_salto = fuerza_salto_original
+
+
+func _on_EnfriamientoPowerUpVolar_timeout():
+	animacion_power_up.play("default")
+	acel_caida = acel_caida_original

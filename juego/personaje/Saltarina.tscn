@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://recursos/Players/bunny2_stand.png" type="Texture" id=1]
 [ext_resource path="res://juego/personaje/Saltarina.gd" type="Script" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://recursos/Players/bunny2_walk1.png" type="Texture" id=4]
 [ext_resource path="res://recursos/Players/bunny2_walk2.png" type="Texture" id=5]
 [ext_resource path="res://recursos/Sfx/Jump 6.wav" type="AudioStream" id=6]
+[ext_resource path="res://recursos/Items/wing_right.png" type="Texture" id=7]
+[ext_resource path="res://recursos/Items/wing_left.png" type="Texture" id=8]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -32,6 +34,88 @@ height = 62.1167
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 39.1962, 4.5 )
 
+[sub_resource type="Animation" id=4]
+resource_name = "default"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("wing_right:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("wing_left:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "volar"
+length = 0.8
+loop = true
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("wing_left:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 10.0, 0.0, -40.0, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("wing_right:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -10.0, 0.0, 40.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("wing_left:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("wing_right:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
 [node name="Saltarina" type="KinematicBody2D" groups=[
 "jugador",
 ]]
@@ -47,6 +131,18 @@ __meta__ = {
 velocidad = Vector2( 600, 900 )
 acel_caida = 280
 fuerza_salto = 2800
+
+[node name="wing_left" type="Sprite" parent="."]
+visible = false
+position = Vector2( -23.1352, -99.5689 )
+texture = ExtResource( 8 )
+offset = Vector2( -40.8648, -13.4311 )
+
+[node name="wing_right" type="Sprite" parent="."]
+visible = false
+position = Vector2( 23.7106, -98.3314 )
+texture = ExtResource( 7 )
+offset = Vector2( 40.2894, -14.6686 )
 
 [node name="Animacion" type="AnimatedSprite" parent="."]
 position = Vector2( 0, -102.004 )
@@ -77,7 +173,16 @@ drag_margin_v_enabled = true
 drag_margin_left = 0.1
 drag_margin_right = 0.1
 
-[node name="EnfriamientoPowerUp" type="Timer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/default = SubResource( 4 )
+anims/volar = SubResource( 5 )
+
+[node name="EnfriamientoPowerUpSalto" type="Timer" parent="."]
 wait_time = 1.5
 one_shot = true
-[connection signal="timeout" from="EnfriamientoPowerUp" to="." method="_on_EnfriamientoPowerUp_timeout"]
+
+[node name="EnfriamientoPowerUpVolar" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+[connection signal="timeout" from="EnfriamientoPowerUpSalto" to="." method="_on_EnfriamientoPowerUp_timeout"]
+[connection signal="timeout" from="EnfriamientoPowerUpVolar" to="." method="_on_EnfriamientoPowerUpVolar_timeout"]
