@@ -167,9 +167,27 @@ position = Vector2( -16.0181, 711.47 )
 position = Vector2( 38.0145, 637.307 )
 
 [node name="MonedaBronce" parent="Monedas" instance=ExtResource( 12 )]
-position = Vector2( 100.523, 713.589 )
+position = Vector2( 98.2754, 701.602 )
+
+[node name="MonedaOro2" parent="Monedas" instance=ExtResource( 10 )]
+position = Vector2( -73.1, 697.199 )
+
+[node name="MonedaPlata2" parent="Monedas" instance=ExtResource( 11 )]
+position = Vector2( -19.0674, 623.037 )
+
+[node name="MonedaBronce2" parent="Monedas" instance=ExtResource( 12 )]
+position = Vector2( 41.1935, 687.332 )
+
+[node name="MonedaOro3" parent="Monedas" instance=ExtResource( 10 )]
+position = Vector2( 44.0369, 722.172 )
+
+[node name="MonedaPlata3" parent="Monedas" instance=ExtResource( 11 )]
+position = Vector2( 98.0695, 648.01 )
+
+[node name="MonedaBronce3" parent="Monedas" instance=ExtResource( 12 )]
+position = Vector2( 158.33, 712.305 )
 
 [node name="Rayos" type="Node" parent="."]
 
 [node name="Saltarina" parent="." instance=ExtResource( 1 )]
-position = Vector2( -135.8, 820.683 )
+position = Vector2( -121.896, 820.362 )
