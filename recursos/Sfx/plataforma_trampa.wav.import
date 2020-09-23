@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/plataforma_trampa.wav-6537465f9e8a6c0c58a37bf6bbf1f548.sample"
+
+[deps]
+
+source_file="res://recursos/Sfx/plataforma_trampa.wav"
+dest_files=[ "res://.import/plataforma_trampa.wav-6537465f9e8a6c0c58a37bf6bbf1f548.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
