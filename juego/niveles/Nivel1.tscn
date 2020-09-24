@@ -10,7 +10,7 @@
 [ext_resource path="res://juego/enemigos/Pinchon.tscn" type="PackedScene" id=8]
 [ext_resource path="res://juego/enemigos/Nubon.tscn" type="PackedScene" id=9]
 [ext_resource path="res://juego/objetos/PlataformaTrampa.tscn" type="PackedScene" id=10]
-[ext_resource path="res://juego/objetos/Pinchos.tscn" type="PackedScene" id=11]
+[ext_resource path="res://juego/objetos/Portal.tscn" type="PackedScene" id=11]
 
 [node name="Nivel1" type="Node"]
 
@@ -167,11 +167,5 @@ position = Vector2( -121.896, 820.362 )
 [node name="PlataformaTrampa" parent="." instance=ExtResource( 10 )]
 position = Vector2( -375.243, 844.273 )
 
-[node name="Pinchos" parent="." instance=ExtResource( 11 )]
-position = Vector2( 250.464, 544.584 )
-rotation = 3.14159
-es_trampa = true
-
-[node name="Pinchos2" parent="." instance=ExtResource( 11 )]
-position = Vector2( 73.5392, 821.025 )
-es_trampa = true
+[node name="Portal" parent="." instance=ExtResource( 11 )]
+position = Vector2( 62.8532, 757.361 )
