@@ -6,7 +6,7 @@
 [ext_resource path="res://recursos/Particles/portal_yellowParticle.png" type="Texture" id=4]
 [ext_resource path="res://recursos/Particles/portal_orangeParticle.png" type="Texture" id=5]
 
-[sub_resource type="CapsuleShape2D" id=5]
+[sub_resource type="CapsuleShape2D" id=7]
 radius = 49.9658
 height = 41.9341
 
@@ -128,7 +128,7 @@ collision_mask = 2
 script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 5 )
+shape = SubResource( 7 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "desactivado"
@@ -137,6 +137,7 @@ anims/desactivado = SubResource( 3 )
 
 [node name="Particles2D" type="Particles2D" parent="."]
 scale = Vector2( 0.5, 0.5 )
+emitting = false
 amount = 80
 explosiveness = 0.2
 randomness = 0.5
@@ -145,6 +146,7 @@ texture = ExtResource( 4 )
 
 [node name="Particles2D2" type="Particles2D" parent="."]
 scale = Vector2( 0.5, 0.5 )
+emitting = false
 amount = 80
 explosiveness = 0.2
 randomness = 0.5
@@ -152,6 +154,7 @@ process_material = SubResource( 4 )
 texture = ExtResource( 5 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+modulate = Color( 0.482353, 0.482353, 0.482353, 1 )
 scale = Vector2( 0.4, 1.5 )
 frames = SubResource( 6 )
 frame = 1
