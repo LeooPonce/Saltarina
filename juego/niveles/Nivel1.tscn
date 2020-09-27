@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://juego/personaje/Saltarina.tscn" type="PackedScene" id=1]
 [ext_resource path="res://juego/plataformas/PlataformaCesped.tscn" type="PackedScene" id=2]
@@ -13,16 +13,62 @@
 [ext_resource path="res://juego/objetos/Portal.tscn" type="PackedScene" id=11]
 [ext_resource path="res://juego/objetos/ZanahoriaLlave.tscn" type="PackedScene" id=12]
 [ext_resource path="res://juego/niveles/Nivel.gd" type="Script" id=13]
+[ext_resource path="res://recursos/Background/bg_layer2.png" type="Texture" id=14]
+[ext_resource path="res://recursos/Background/bg_layer3.png" type="Texture" id=15]
+[ext_resource path="res://recursos/Background/bg_layer4.png" type="Texture" id=16]
 
 [node name="Nivel1" type="Node"]
 script = ExtResource( 13 )
 
-[node name="Fondo" type="Sprite" parent="."]
-position = Vector2( 900.936, 541.061 )
-scale = Vector2( 4.60302, 2.17841 )
-z_index = -50
-z_as_relative = false
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_base_offset = Vector2( 0, -350 )
+
+[node name="ParallaxFondo" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0, 1 )
+motion_mirroring = Vector2( 2048, 2048 )
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxFondo"]
+margin_right = 2048.0
+margin_bottom = 2048.0
 texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ParallaxNubesLejanas" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.3, 1 )
+motion_mirroring = Vector2( 2048, 0 )
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxNubesLejanas"]
+margin_right = 2048.0
+margin_bottom = 2048.0
+texture = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ParallaxNubesMedias" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.6, 1 )
+motion_mirroring = Vector2( 2048, 0 )
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxNubesMedias"]
+margin_right = 2048.0
+margin_bottom = 2048.0
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ParallaxNubesCercanas" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 2048, 0 )
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxNubesCercanas"]
+margin_right = 2048.0
+margin_bottom = 2048.0
+texture = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="PlataformasNormales" type="Node" parent="."]
 
@@ -169,7 +215,7 @@ position = Vector2( -429.08, 761.871 )
 [node name="Rayos" type="Node" parent="."]
 
 [node name="Saltarina" parent="." instance=ExtResource( 1 )]
-position = Vector2( -89.8363, 811.708 )
+position = Vector2( -3890.89, 872.98 )
 
 [node name="PlataformaTrampa" parent="." instance=ExtResource( 10 )]
 position = Vector2( -375.243, 844.273 )
@@ -177,3 +223,7 @@ position = Vector2( -375.243, 844.273 )
 [node name="Portal" parent="." instance=ExtResource( 11 )]
 position = Vector2( 113.552, 750.761 )
 proximo_nivel = "res://juego/niveles/NivelTemporal.tscn"
+
+[node name="PlataformaLargaPiedra" parent="." instance=ExtResource( 4 )]
+position = Vector2( -1051.26, 984.663 )
+scale = Vector2( 5, 0.3 )
