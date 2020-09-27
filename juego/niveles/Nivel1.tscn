@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://juego/personaje/Saltarina.tscn" type="PackedScene" id=1]
 [ext_resource path="res://juego/plataformas/PlataformaCesped.tscn" type="PackedScene" id=2]
@@ -11,8 +11,11 @@
 [ext_resource path="res://juego/enemigos/Nubon.tscn" type="PackedScene" id=9]
 [ext_resource path="res://juego/objetos/PlataformaTrampa.tscn" type="PackedScene" id=10]
 [ext_resource path="res://juego/objetos/Portal.tscn" type="PackedScene" id=11]
+[ext_resource path="res://juego/objetos/ZanahoriaLlave.tscn" type="PackedScene" id=12]
+[ext_resource path="res://juego/niveles/Nivel.gd" type="Script" id=13]
 
 [node name="Nivel1" type="Node"]
+script = ExtResource( 13 )
 
 [node name="Fondo" type="Sprite" parent="."]
 position = Vector2( 900.936, 541.061 )
@@ -128,10 +131,6 @@ position = Vector2( 43.4705, 838.372 )
 position = Vector2( 171.932, 188.619 )
 velocidad = 150.0
 
-[node name="Pinchon2" parent="Enemigos" instance=ExtResource( 8 )]
-position = Vector2( -431.814, 811.818 )
-velocidad = 120.0
-
 [node name="Pinchon3" parent="Enemigos" instance=ExtResource( 8 )]
 position = Vector2( 1967.25, 860.243 )
 velocidad = 160.0
@@ -159,6 +158,14 @@ position = Vector2( 2836.03, -298.38 )
 
 [node name="Monedas" type="Node" parent="."]
 
+[node name="Zanahorias" type="Node" parent="."]
+
+[node name="ZanahoriaLlave" parent="Zanahorias" instance=ExtResource( 12 )]
+position = Vector2( -31.6864, 768.942 )
+
+[node name="ZanahoriaLlave2" parent="Zanahorias" instance=ExtResource( 12 )]
+position = Vector2( -429.08, 761.871 )
+
 [node name="Rayos" type="Node" parent="."]
 
 [node name="Saltarina" parent="." instance=ExtResource( 1 )]
@@ -168,4 +175,4 @@ position = Vector2( -121.896, 820.362 )
 position = Vector2( -375.243, 844.273 )
 
 [node name="Portal" parent="." instance=ExtResource( 11 )]
-position = Vector2( 62.8532, 757.361 )
+position = Vector2( 113.552, 750.761 )
