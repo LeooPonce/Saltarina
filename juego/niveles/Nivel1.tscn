@@ -220,7 +220,7 @@ position = Vector2( -429.08, 761.871 )
 [node name="Rayos" type="Node" parent="."]
 
 [node name="Saltarina" parent="." instance=ExtResource( 1 )]
-position = Vector2( -1181.3, 937.107 )
+position = Vector2( -158.813, 808.962 )
 
 [node name="PlataformaTrampa" parent="." instance=ExtResource( 10 )]
 position = Vector2( -375.243, 844.273 )
@@ -228,7 +228,3 @@ position = Vector2( -375.243, 844.273 )
 [node name="Portal" parent="." instance=ExtResource( 11 )]
 position = Vector2( 113.552, 750.761 )
 proximo_nivel = "res://juego/niveles/NivelTemporal.tscn"
-
-[node name="PlataformaLargaPiedra" parent="." instance=ExtResource( 4 )]
-position = Vector2( -1051.26, 984.663 )
-scale = Vector2( 5, 0.3 )

@@ -12,6 +12,7 @@ var fuerza_salto_original
 var acel_caida_original
 var puede_moverse = true
 
+
 onready var animacion = $Animacion
 onready var audio_salto = $AudioSalto
 onready var camara = $Camera2D
@@ -93,6 +94,7 @@ func caida_al_vacio():
 func respawn():
 	animacion_personaje.play("oscurecer")
 	get_tree().reload_current_scene()
+
 
 
 func _on_EnfriamientoPowerUp_timeout():
