@@ -19,6 +19,10 @@ config/name="Curso Introduccion Creacion VJ"
 run/main_scene="res://juego/niveles/Nivel1.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+DatosPlayer="*res://juego/autoloads/DatosPlayer.gd"
+
 [display]
 
 window/size/width=1280

@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://juego/interfaz/ContenedorLlaves.tscn" type="PackedScene" id=1]
+[ext_resource path="res://juego/interfaz/ContenedorVidas.tscn" type="PackedScene" id=2]
+[ext_resource path="res://juego/interfaz/ContenedorMonedasBronce.tscn" type="PackedScene" id=3]
+[ext_resource path="res://juego/interfaz/ContenedorMonedasPlata.tscn" type="PackedScene" id=4]
+[ext_resource path="res://juego/interfaz/ContenedorMonedasOro.tscn" type="PackedScene" id=5]
+[ext_resource path="res://juego/interfaz/HUD.gd" type="Script" id=6]
+
+[node name="HUD" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 144.969, 37.2202 ],
+"_edit_use_anchors_": false
+}
+
+[node name="ContenedorVidas" parent="." instance=ExtResource( 2 )]
+margin_left = 28.3162
+margin_top = 28.2306
+margin_right = 163.316
+margin_bottom = 78.2306
+
+[node name="ContenedorLlaves" parent="." instance=ExtResource( 1 )]
+margin_left = 28.3162
+margin_top = 85.8069
+margin_right = 163.316
+margin_bottom = 135.807
+
+[node name="ContenedorMonedasOro" parent="." instance=ExtResource( 5 )]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -133.541
+margin_top = 31.9018
+margin_right = -28.541
+margin_bottom = 60.9018
+
+[node name="ContenedorMonedasPlata" parent="." instance=ExtResource( 4 )]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -133.541
+margin_top = 67.6518
+margin_right = -28.541
+margin_bottom = 96.6518
+
+[node name="ContenedorMonedasBronce" parent="." instance=ExtResource( 3 )]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -133.541
+margin_top = 103.652
+margin_right = -28.541
+margin_bottom = 132.652

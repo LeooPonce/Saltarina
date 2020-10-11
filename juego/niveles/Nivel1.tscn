@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://juego/personaje/Saltarina.tscn" type="PackedScene" id=1]
 [ext_resource path="res://juego/plataformas/PlataformaCesped.tscn" type="PackedScene" id=2]
@@ -17,9 +17,15 @@
 [ext_resource path="res://recursos/Background/bg_layer3.png" type="Texture" id=15]
 [ext_resource path="res://recursos/Background/bg_layer4.png" type="Texture" id=16]
 [ext_resource path="res://juego/menus/MenuPausa.tscn" type="PackedScene" id=17]
+[ext_resource path="res://juego/interfaz/HUD.tscn" type="PackedScene" id=18]
+[ext_resource path="res://juego/objetos/Pinchos.tscn" type="PackedScene" id=19]
+[ext_resource path="res://juego/objetos/MonedaPlata.tscn" type="PackedScene" id=20]
+[ext_resource path="res://juego/objetos/MonedaBronce.tscn" type="PackedScene" id=21]
+[ext_resource path="res://juego/objetos/MonedaOro.tscn" type="PackedScene" id=22]
 
 [node name="Nivel1" type="Node"]
 script = ExtResource( 13 )
+nivel_actual = "res://juego/niveles/Nivel1.tscn"
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 scroll_base_offset = Vector2( 0, -350 )
@@ -74,6 +80,9 @@ __meta__ = {
 [node name="CapaFrente" type="CanvasLayer" parent="."]
 
 [node name="MenuPausa" parent="CapaFrente" instance=ExtResource( 17 )]
+visible = false
+
+[node name="HUD" parent="CapaFrente" instance=ExtResource( 18 )]
 
 [node name="PlataformasNormales" type="Node" parent="."]
 
@@ -209,6 +218,24 @@ position = Vector2( 2836.03, -298.38 )
 
 [node name="Monedas" type="Node" parent="."]
 
+[node name="MonedaBronce" parent="Monedas" instance=ExtResource( 21 )]
+position = Vector2( -163.263, 693.63 )
+
+[node name="MonedaOro" parent="Monedas" instance=ExtResource( 22 )]
+position = Vector2( -122.899, 633.926 )
+
+[node name="MonedaPlata" parent="Monedas" instance=ExtResource( 20 )]
+position = Vector2( -195.825, 620.09 )
+
+[node name="MonedaBronce2" parent="Monedas" instance=ExtResource( 21 )]
+position = Vector2( -120.836, 680.902 )
+
+[node name="MonedaOro2" parent="Monedas" instance=ExtResource( 22 )]
+position = Vector2( -80.473, 621.198 )
+
+[node name="MonedaPlata2" parent="Monedas" instance=ExtResource( 20 )]
+position = Vector2( -153.399, 607.362 )
+
 [node name="Zanahorias" type="Node" parent="."]
 
 [node name="ZanahoriaLlave" parent="Zanahorias" instance=ExtResource( 12 )]
@@ -220,7 +247,7 @@ position = Vector2( -429.08, 761.871 )
 [node name="Rayos" type="Node" parent="."]
 
 [node name="Saltarina" parent="." instance=ExtResource( 1 )]
-position = Vector2( -158.813, 808.962 )
+position = Vector2( -157.029, 820.854 )
 
 [node name="PlataformaTrampa" parent="." instance=ExtResource( 10 )]
 position = Vector2( -375.243, 844.273 )
@@ -228,3 +255,6 @@ position = Vector2( -375.243, 844.273 )
 [node name="Portal" parent="." instance=ExtResource( 11 )]
 position = Vector2( 113.552, 750.761 )
 proximo_nivel = "res://juego/niveles/NivelTemporal.tscn"
+
+[node name="Pinchos" parent="." instance=ExtResource( 19 )]
+position = Vector2( -31.1996, 816.503 )

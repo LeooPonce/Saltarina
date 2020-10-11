@@ -6,12 +6,10 @@ export var fuerza_salto = 3000
 export var fuerza_rebote = 350
 export var impulso = -3800
 
-
 var movimiento = Vector2.ZERO
 var fuerza_salto_original
 var acel_caida_original
 var puede_moverse = true
-
 
 onready var animacion = $Animacion
 onready var audio_salto = $AudioSalto
@@ -91,9 +89,12 @@ func caida_al_vacio():
 	if position.y > camara.limit_bottom:
 		respawn()
 
+
 func respawn():
+	DatosPlayer.restar_vidas()
 	animacion_personaje.play("oscurecer")
-	get_tree().reload_current_scene()
+	if DatosPlayer.vidas >= 1:
+		get_tree().reload_current_scene()
 
 
 
