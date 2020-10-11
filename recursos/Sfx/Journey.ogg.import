@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Journey.ogg-416ccdf2a5d377af76a722bbbf4dd7a1.oggstr"
+
+[deps]
+
+source_file="res://recursos/Sfx/Journey.ogg"
+dest_files=[ "res://.import/Journey.ogg-416ccdf2a5d377af76a722bbbf4dd7a1.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

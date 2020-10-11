@@ -16,12 +16,13 @@ _global_script_class_icons={
 [application]
 
 config/name="Curso Introduccion Creacion VJ"
-run/main_scene="res://juego/niveles/Nivel1.tscn"
+run/main_scene="res://juego/niveles/Nivel1_v2.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 DatosPlayer="*res://juego/autoloads/DatosPlayer.gd"
+MusicaGlobal="*res://juego/autoloads/MusicaGlobal.tscn"
 
 [display]
 

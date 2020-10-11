@@ -1,13 +1,11 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://recursos/Background/bg_layer1.png" type="Texture" id=1]
-[ext_resource path="res://juego/interfaz/HUD.gd" type="Script" id=2]
 [ext_resource path="res://recursos/Background/bg_layer2.png" type="Texture" id=3]
 [ext_resource path="res://recursos/Background/bg_layer3.png" type="Texture" id=4]
 [ext_resource path="res://recursos/Background/bg_layer4.png" type="Texture" id=5]
 [ext_resource path="res://juego/menus/MenuPausa.tscn" type="PackedScene" id=6]
 [ext_resource path="res://juego/interfaz/HUD.tscn" type="PackedScene" id=7]
-[ext_resource path="res://juego/menus/MenuPausa.gd" type="Script" id=8]
 [ext_resource path="res://juego/niveles/Nivel.gd" type="Script" id=9]
 
 [node name="NivelBase" type="Node"]
@@ -65,24 +63,10 @@ __meta__ = {
 
 [node name="CapaFrente" type="CanvasLayer" parent="."]
 
-[node name="MenuPausa" type="Control" parent="CapaFrente" instance=ExtResource( 6 )]
-pause_mode = 2
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-script = ExtResource( 8 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="HUD" parent="CapaFrente" instance=ExtResource( 7 )]
 
-[node name="HUD" type="Control" parent="CapaFrente" instance=ExtResource( 7 )]
-anchor_right = 1.0
-anchor_bottom = 1.0
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_horizontal_guides_": [ 144.969, 37.2202 ],
-"_edit_use_anchors_": false
-}
+[node name="MenuPausa" parent="CapaFrente" instance=ExtResource( 6 )]
+visible = false
 
 [node name="PlataformasNormales" type="Node" parent="."]
 
