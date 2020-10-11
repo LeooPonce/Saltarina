@@ -11,7 +11,7 @@ func _ready():
 	animacion.play()
 
 
-func _on_body_entered(body):
+func _on_body_entered(_body):
 	DatosPlayer.sumar_monedas(tipo_moneda)
 	colision_personaje.set_deferred("disabled", true)
 	animacion_consumir.play("consumir")

@@ -1,7 +1,9 @@
 extends Area2D
 
-var esta_activado = false
 export var proximo_nivel = ""
+
+var esta_activado = false
+
 
 func _on_body_entered(body):
 	if esta_activado:
@@ -9,8 +11,11 @@ func _on_body_entered(body):
 		yield(get_tree().create_timer(1.0), "timeout")
 		cambiar_nivel()
 
+
 func cambiar_nivel():
+# warning-ignore:return_value_discarded
 	get_tree().change_scene(proximo_nivel)
+
 
 func play_animacion():
 	esta_activado = true

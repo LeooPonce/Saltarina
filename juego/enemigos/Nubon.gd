@@ -1,19 +1,21 @@
 extends Node2D
 
+export var rayo: PackedScene
+
+var puede_disparar = true
+
 onready var detector_jugador = $Sprite/RayCast2D
 onready var posiciones_disparo = $Sprite/PosicionesDisparo
 onready var cadencia_disparo = $Timer
 onready var sfx_rayos = $Rayos
 
-export var rayo: PackedScene
 
-var puede_disparar = true
-
-func _process(delta):
+func _process(_delta):
 	if detector_jugador.is_colliding() and puede_disparar:
 		disparar()
 		puede_disparar = false
 		cadencia_disparo.start()
+
 
 func disparar():
 	sfx_rayos.play()

@@ -1,5 +1,6 @@
 extends Control
 
+
 func _ready():
 	$PanelPuntaje/Puntaje.text = "Puntaje: {p}".format({"p": DatosPlayer.generar_puntaje()})
 

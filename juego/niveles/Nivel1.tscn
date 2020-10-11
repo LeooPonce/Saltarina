@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://juego/personaje/Saltarina.tscn" type="PackedScene" id=1]
 [ext_resource path="res://juego/plataformas/PlataformaCesped.tscn" type="PackedScene" id=2]
@@ -10,7 +10,6 @@
 [ext_resource path="res://juego/enemigos/Pinchon.tscn" type="PackedScene" id=8]
 [ext_resource path="res://juego/enemigos/Nubon.tscn" type="PackedScene" id=9]
 [ext_resource path="res://juego/objetos/PlataformaTrampa.tscn" type="PackedScene" id=10]
-[ext_resource path="res://juego/objetos/Portal.tscn" type="PackedScene" id=11]
 [ext_resource path="res://juego/objetos/ZanahoriaLlave.tscn" type="PackedScene" id=12]
 [ext_resource path="res://juego/niveles/Nivel.gd" type="Script" id=13]
 [ext_resource path="res://recursos/Background/bg_layer2.png" type="Texture" id=14]
@@ -251,10 +250,6 @@ position = Vector2( -157.029, 820.854 )
 
 [node name="PlataformaTrampa" parent="." instance=ExtResource( 10 )]
 position = Vector2( -375.243, 844.273 )
-
-[node name="Portal" parent="." instance=ExtResource( 11 )]
-position = Vector2( 113.552, 750.761 )
-proximo_nivel = "res://juego/menus/MenuVictoria.tscn"
 
 [node name="Pinchos" parent="." instance=ExtResource( 19 )]
 position = Vector2( -31.1996, 816.503 )

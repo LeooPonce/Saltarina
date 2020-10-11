@@ -32,6 +32,7 @@ func _physics_process(_delta):
 	colision_techo()
 	caida_al_vacio()
 
+# warning-ignore:return_value_discarded
 	move_and_slide(movimiento, Vector2.UP)
 
 func tomar_direccion():
@@ -63,20 +64,25 @@ func saltar():
 		animacion.play("saltar")
 		saltar_movimiento()
 
+
 func saltar_movimiento():
 	movimiento.y = 0
 	movimiento.y -= fuerza_salto
+
 
 func colision_techo():
 	if is_on_ceiling():
 		movimiento.y = fuerza_rebote
 
+
 func impulsar():
 	movimiento.y = impulso
+
 
 func cambiar_fuerza_salto():
 	enfriamiento_power_up.start()
 	fuerza_salto = -impulso * 0.9
+
 
 func volar():
 	enfriamiento_power_up_volar.start()
@@ -94,8 +100,8 @@ func respawn():
 	DatosPlayer.restar_vidas()
 	animacion_personaje.play("oscurecer")
 	if DatosPlayer.vidas >= 1:
+# warning-ignore:return_value_discarded
 		get_tree().reload_current_scene()
-
 
 
 func _on_EnfriamientoPowerUp_timeout():
@@ -105,6 +111,7 @@ func _on_EnfriamientoPowerUp_timeout():
 func _on_EnfriamientoPowerUpVolar_timeout():
 	animacion_personaje.play("default")
 	acel_caida = acel_caida_original
+
 
 func play_entrar_portal(posicion_portal):
 	puede_moverse = false

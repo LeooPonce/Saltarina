@@ -18,12 +18,14 @@ func reset():
 	monedas_plata = 0
 	puntaje = 0
 
+
 func generar_puntaje():
 	var valor_oro = monedas_oro * 10
 	var valor_plata = monedas_plata * 5
 	var valor_bronce = monedas_bronce * 2
 	puntaje = valor_oro + valor_plata + valor_bronce
 	return puntaje
+
 
 func restar_vidas():
 	vidas -= 1
@@ -32,13 +34,16 @@ func restar_vidas():
 	
 	emit_signal("actualizar_datos")
 
+
 func restar_llaves():
 	llaves -= 1
 	emit_signal("actualizar_datos")
 
+
 func contabilizar_llaves(valor):
 	llaves = valor
 	emit_signal("actualizar_datos")
+
 
 func sumar_monedas(moneda):
 	match moneda:

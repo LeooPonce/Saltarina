@@ -8,6 +8,7 @@ onready var etiqueta_llaves = $ContenedorLlaves/Cantidad
 
 
 func _ready():
+# warning-ignore:return_value_discarded
 	DatosPlayer.connect("actualizar_datos", self, "actualizar_hud")
 	actualizar_hud()
 
