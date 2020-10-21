@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Curso Introduccion Creacion VJ"
-run/main_scene="res://juego/niveles/Nivel1_v2.tscn"
+run/main_scene="res://juego/menus/MenuPrincipal.tscn"
 config/icon="res://icon.png"
 
 [autoload]

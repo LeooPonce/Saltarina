@@ -98,4 +98,5 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="pressed" from="Panel/VBoxContainer/BotonContinuar" to="." method="_on_BotonContinuar_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/BotonMenuPrincipal" to="." method="_on_BotonMenuPrincipal_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/BotonSalir" to="Panel/VBoxContainer/BotonSalir" method="_on_pressed"]

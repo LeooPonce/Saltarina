@@ -1,5 +1,7 @@
 extends Control
 
+func _ready():
+	DatosPlayer.reset()
 
 func _on_BotonIniciar_pressed():
 	MusicaGlobal.replay()
