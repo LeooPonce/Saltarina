@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://juego/niveles/NivelBase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://juego/personaje/Saltarina.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://juego/objetos/MonedaPlata.tscn" type="PackedScene" id=10]
 [ext_resource path="res://juego/plataformas/PlataformaArena.tscn" type="PackedScene" id=11]
 [ext_resource path="res://juego/objetos/PlataformaImpulsora.tscn" type="PackedScene" id=12]
+[ext_resource path="res://juego/enemigos/Volon.tscn" type="PackedScene" id=13]
 
 [node name="Nivel3" instance=ExtResource( 1 )]
 nivel_actual = "res://juego/niveles/Nivel3.tscn"
@@ -29,7 +30,7 @@ position = Vector2( -217.789, 1388.76 )
 position = Vector2( 1475.23, 948.021 )
 
 [node name="PlataformaCorta3" parent="PlataformasCortas" index="2" instance=ExtResource( 6 )]
-position = Vector2( 1754.93, 1395.11 )
+position = Vector2( 1965.65, 1395.11 )
 
 [node name="PlataformaLargaPiedra" parent="PlataformasLargas" index="0" instance=ExtResource( 3 )]
 position = Vector2( 158.096, 1301.84 )
@@ -42,6 +43,9 @@ position = Vector2( 729.606, 1188.29 )
 
 [node name="Pinchos" parent="Enemigos" index="1" instance=ExtResource( 8 )]
 position = Vector2( 153.978, 1287.56 )
+
+[node name="Volon" parent="Enemigos" index="2" instance=ExtResource( 13 )]
+position = Vector2( 1707.77, 1186.94 )
 
 [node name="MonedaBronce" parent="Monedas" index="0" instance=ExtResource( 9 )]
 position = Vector2( -183.896, 1344.99 )
@@ -74,7 +78,7 @@ position = Vector2( 1350.07, 1142.04 )
 position = Vector2( 1475.09, 885.655 )
 
 [node name="Portal" parent="." index="9" instance=ExtResource( 5 )]
-position = Vector2( 1756.53, 1316.37 )
+position = Vector2( 1967.25, 1316.37 )
 proximo_nivel = "res://juego/niveles/Nivel4.tscn"
 
 [node name="Saltarina" parent="." index="10" instance=ExtResource( 2 )]
