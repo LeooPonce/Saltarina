@@ -6,8 +6,12 @@ El juego sirve como base para el curso dictado en <https://capacitaciones.chaco.
 ***Engine:*** Godot v3.1
 
 ***Lenguaje:*** GDScript
+
+***Plataforma:*** PC
+
+***Genero:*** Aventura - Plataformas
 ***
-### Preview
+### ***Preview***
+[![Gameplay Saltarina](https://img.youtube.com/vi//0.jpg)]()
 ***
-### Imagenes
-***
+### ***Imagenes***
