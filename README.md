@@ -13,6 +13,16 @@ El juego sirve como base para el curso dictado en <https://capacitaciones.chaco.
 ***Genero:*** Aventura - Plataformas
 ***
 ### ***Preview***
+(Click en la imagen para abrir video en youtube)
+
 [![Gameplay Saltarina](https://img.youtube.com/vi/5rPOwfvy6d4/0.jpg)](https://www.youtube.com/watch?v=5rPOwfvy6d4)
 ***
 ### ***Imagenes***
+
+<img src="https://user-images.githubusercontent.com/22348284/113461222-1a725000-93f2-11eb-9383-0b1db5eb8d4b.gif" width=50% height=50%/>
+
+<img src="https://user-images.githubusercontent.com/22348284/113461224-1d6d4080-93f2-11eb-9162-bfd0898aba8a.gif" width=50% height=50%/>
+
+<img src="https://user-images.githubusercontent.com/22348284/113461227-1e9e6d80-93f2-11eb-9969-734f47ca1f9a.gif" width=50% height=50%/>
+
+<img src="https://user-images.githubusercontent.com/22348284/113461229-1fcf9a80-93f2-11eb-8ee2-5740a6206930.gif" width=50% height=50%/>
